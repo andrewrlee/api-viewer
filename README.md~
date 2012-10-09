@@ -32,7 +32,7 @@ A command element consists of the following fields:
 * *Example* : An example that triggers the command
 * *description* : An explanation of how to use the command and the action that it performs
 
-An example of a complete data file is: 
+An example of a complete data file would be: 
 
     {
     	"Mammals": [
