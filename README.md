@@ -12,7 +12,7 @@ This viewer is configured through the config.js file. The following options are 
     //The name of this api: Used in title and Navbar
     var apiName = "Animal Creation Language API";
 
-    //The description of this api: Provides a textual description of this api (The html for this is not escaped)
+    //The description of this api: Provides a textual description of this api (Any html is not escaped)
     var apiDescription = "A glossary for the elements of this <strong>" +apiName+ "</strong> are below";
 
     //The type of this api: This will be displayed as the main page	 header
@@ -30,7 +30,7 @@ A Command may be mapped to multiple Sections but this must be represented in the
 A Command element consists of the following fields:
 * *Expression*: The identifier of the Command. 
 * *Example* : An example that triggers the Command.
-* *description* : An explanation of how to use the Command and the action that it performs  (The html for this is not escaped).
+* *description* : An explanation of how to use the Command and the action that it performs  (Any html is not escaped).
 
 An example of a complete data file is: 
 
