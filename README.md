@@ -9,17 +9,17 @@ Configuration
 ------------------
 This is configured through config.js. The following options are available:
 
-`//The name of this api: Used in title and Navbar
-var apiName = "Animal Creation Language API";
+    //The name of this api: Used in title and Navbar
+    var apiName = "Animal Creation Language API";
 
-//The description of this api: Provides a textual description of this api
-var apiDescription = "A glossary for the elements of this <strong>" +apiName+ "</strong> are below";
+    //The description of this api: Provides a textual description of this api
+    var apiDescription = "A glossary for the elements of this <strong>" +apiName+ "</strong> are below";
 
-//The type of this api: This will be displayed as a header
-var apiType = "Animals:";
+    //The type of this api: This will be displayed as a header
+    var apiType = "Animals:";
 
-//The location of the data file
-var dataLocation = "animals.json";`
+    //The location of the data file
+    var dataLocation = "animals.json";
 
 Data
 ------------------
@@ -34,24 +34,24 @@ A command element consists of the following fields:
 
 An example of a full data file would be: 
 
-`{
+    {
     "Mammals": [
         {
-            "expression": "Dog name=\"<name>\" age=\"<ageInYears>\"",
-            "example": "Dog name=\"Rex\" age=\"4\"",
-            "description": "Creates a new (slightly smelly) four-legged friend."
+        "expression": "Dog name=\"<name>\" age=\"<ageInYears>\"",
+        "example": "Dog name=\"Rex\" age=\"4\"",
+         "description": "Creates a new (slightly smelly) four-legged friend."
         },
         {
-            "expression": "Cat name=\"<name>\" age=\"<ageInYears>\"",
-            "example": "Cat name=\"Timothy\" age=\"17\"",
-            "description": "Creates a new four-legged friend that belongs on broadway."
+        "expression": "Cat name=\"<name>\" age=\"<ageInYears>\"",
+        "example": "Cat name=\"Timothy\" age=\"17\"",
+        "description": "Creates a new four-legged friend that belongs on broadway."
         }
     ],
     "Reptiles": [
         {
-            "expression": "new Crocodile(\"<name>\")",
-            "example": "new Crocodile(\"Sam\")",
-            "description": "Creates a new <strong>SCARY!</strong> Crocodile with the given name."
+        "expression": "new Crocodile(\"<name>\")",
+        "example": "new Crocodile(\"Sam\")",
+        "description": "Creates a new <strong>SCARY!</strong> Crocodile with the given name."
         }
     ]
-}`
+    }
