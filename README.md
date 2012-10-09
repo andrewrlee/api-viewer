@@ -1,7 +1,7 @@
 api-viewer
 ==========
 
-This is a generic viewer for displaying a glossary for an API or a DSL. It is a single page web application written using [angular.js](http://angularjs.org/), [jquery](http://jquery.com/) and [bootstrap](http://twitter.github.com/bootstrap/). 
+This is a simple generic viewer for displaying a glossary for an API or a DSL. It is a single page web application written using [angular.js](http://angularjs.org/), [jquery](http://jquery.com/) and [bootstrap](http://twitter.github.com/bootstrap/). 
 
 An example of a configured viewer is present [here](http://plasma147.github.com/api-viewer/).
 
