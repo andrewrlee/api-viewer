@@ -3,13 +3,11 @@
         {
             "expression": "Dog name=\"<name>\" age=\"<ageInYears>\"",
             "example": "Dog name=\"Rex\" age=\"4\"",
-            "section": "Mammals",
             "description": "Creates a new (slightly smelly) four-legged friend."
         },
         {
             "expression": "Cat name=\"<name>\" age=\"<ageInYears>\"",
             "example": "Cat name=\"Timothy\" age=\"17\"",
-            "section": "Mammals",
             "description": "Creates a new four-legged friend that belongs on broadway."
         }
     ],
@@ -17,7 +15,6 @@
         {
             "expression": "new Crocodile(\"<name>\")",
             "example": "new Crocodile(\"Sam\")",
-            "section": "Reptiles",
             "description": "Creates a new <strong>SCARY!</strong> Crocodile with the given name."
         }
     ]
