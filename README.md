@@ -23,14 +23,14 @@ This viewer is configured through the config.js file. The following options are 
 
 Data
 ------------------
-The data file that is used by this viewer is a json resource that contains a map of sections to command objects. A section is just a simple label that can be asssociated with a group of commands. 
+The data file that is used by this viewer is a json resource that contains a map of Sections to Command objects. A Section is just a simple label that can be asssociated with a group of Commands. 
 
-A command may be mapped to multiple sections but this must be represented in the data file.
+A Command may be mapped to multiple Sections but this must be represented in the data file.
 
-A command element consists of the following fields:
-* *Expression*: The identifier of the command 
-* *Example* : An example that triggers the command
-* *description* : An explanation of how to use the command and the action that it performs
+A Command element consists of the following fields:
+* *Expression*: The identifier of the Command 
+* *Example* : An example that triggers the Command
+* *description* : An explanation of how to use the Command and the action that it performs
 
 An example of a complete data file is: 
 
