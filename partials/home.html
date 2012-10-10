@@ -1,11 +1,9 @@
 
-
 <h3 data-api-type></h3>
 <p ng-bind-html="apiDescription"></p>
 <br/>
 <input type="text" ng-model="query" class="search-query " placeholder="Filter"></input>
 	<span class="pull-right"><a href="" onclick="$('.accordion-body').collapse('hide')"><i class="icon-minus-sign"></i></a> / <a href="" onclick="$('.accordion-body').collapse('show')"> <i class="icon-plus-sign"></i></a></span> 
-<br/>
 <br/>
 <div class="span11" ng-repeat="(section,list) in glossary">
 	<div class="accordion-heading">
@@ -19,7 +17,7 @@
 				<h4>{{item.expression}}</h4>
 				<p class="description" ng-bind-html="item.description"></p>
 				<p><strong><small>example:</small></strong></p>
-				<p class="well">{{item.example}}</p>
+				<p class="well" ng-bind-html="item.example"></p>
 			</div>
 		</div>
 		<br />
