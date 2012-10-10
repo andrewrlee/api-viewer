@@ -1,6 +1,6 @@
 
 //Version of the report viewer
-var version = 0.1;
+var version = 0.2;
 
 //The name of this api: Used in title and Navbar
 var apiName = "Animal Creation Language API";
