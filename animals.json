@@ -1,21 +1,334 @@
 {
-    "Mammals": [
+    "Assertions": [
         {
-            "expression": "Dog name=\"<name>\" age=\"<ageInYears>\"",
-            "example": "Dog name=\"Rex\" age=\"4\"",
-            "description": "Creates a new (slightly smelly) four-legged friend."
+            "expression": "AssertCheckBox checked=\"<checkedString>\"",
+            "example": "AssertCheckBox checked=true/false",
+            "section": "Assertions",
+            "description": "Check that the current element, a checkbox is checked or not"
         },
         {
-            "expression": "Cat name=\"<name>\" age=\"<ageInYears>\"",
-            "example": "Cat name=\"Timothy\" age=\"17\"",
-            "description": "Creates a new four-legged friend that belongs on broadway."
+            "expression": "AssertChildElementsContainText xpath=\"<xpath>\" text=\"<text>\"",
+            "example": "AssertChildElementsContainText xpath=\"li//a\" text = \"Log Out\"",
+            "section": "Assertions",
+            "description": "From the current element, apply the xpath and check to see if any of the  children have the text ..."
+        },
+        {
+            "expression": "AssertCurrentElement attribute=\"<attribute>\" value=\"<expected>\"",
+            "example": "AssertCurrentElement attribute=\"class\" value=\"icon32x32\"",
+            "section": "Assertions",
+            "description": "Check that the current element has the specified attribute and value"
+        },
+        {
+            "expression": "AssertCurrentElement has attributes=[<attributeString>]",
+            "example": "AssertCurrentElement has\n          attributes=[type=\"submit\",value=\"Search\"]",
+            "section": "Assertions",
+            "description": "Check that the current element has the specified attributes"
+        },
+        {
+            "expression": "AssertCurrentElement text contains \"<expected>\"",
+            "example": "AssertCurrentElement text contains \"Hello world\"",
+            "section": "Assertions",
+            "description": "Check that the current element contains the specified text"
+        },
+        {
+            "expression": "AssertCurrentElement text=\"<expected>\"",
+            "example": "AssertCurrentElement text=\"Hello World!\"",
+            "section": "Assertions",
+            "description": "Check that the current element has the expected text value"
+        },
+        {
+            "expression": "AssertPageTitle is \"<expectedTitle>\"",
+            "example": "AssertPageTitle is \"My Home Page\"",
+            "section": "Assertions",
+            "description": "Check that the page title is ...."
+        },
+        {
+            "expression": "AssertRadioButton checked=\"<checkedString>\"",
+            "example": "AssertRadioButton checked=true/false",
+            "section": "Assertions",
+            "description": "Check that the current element, a radio button, is checked or not"
+        },
+        {
+            "expression": "AssertTagElementContainsAttribute tag=\"<tag>\" attributeName=\"<attributeName>\" attributeValue=\"<attributeValue>\"",
+            "example": "AssertTagElementContainsText tag=\"ul\" attributeName=\"class\"\n          attributeValue=\"a_list\"",
+            "section": "Assertions",
+            "description": "Check that any of the html tags have the specified attribute name and  value"
+        },
+        {
+            "expression": "AssertTagElementContainsText tag=\"<tag>\" text=\"<text>\"",
+            "example": "AssertTagElementContainsText tag=\"ul\" text=\"list item itext\"",
+            "section": "Assertions",
+            "description": "Check that any of the html tags have the specified text"
+        },
+        {
+            "expression": "AssertValue id <id> text = \"<expected>\"",
+            "example": "AssertValue id msg_id text = \"Hello World\"",
+            "section": "Assertions",
+            "description": "Check that the element with id has the text ...."
         }
     ],
-    "Reptiles": [
+    "Clicks": [
         {
-            "expression": "new Crocodile(\"<name>\")",
-            "example": "new Crocodile(\"Sam\")",
-            "description": "Creates a new <strong>SCARY!</strong> Crocodile with the given name."
+            "expression": "Click",
+            "example": "Click",
+            "section": "Clicks",
+            "description": "Click (the current element)"
+        },
+        {
+            "expression": "ClickButton <buttonText>",
+            "example": "ClickButton submit",
+            "section": "Clicks",
+            "description": "Click a button that has the text..."
+        },
+        {
+            "expression": "ClickById <id>",
+            "example": "ClickById login",
+            "section": "Clicks",
+            "description": "Find an element by id, then click it."
+        },
+        {
+            "expression": "ClickLink \"<linkText>\"",
+            "example": "ClickLink \"Contracts\"",
+            "section": "Clicks",
+            "description": "Click the link \"(....)\" as it appears on the page"
+        },
+        {
+            "expression": "Submit",
+            "example": "Submit",
+            "section": "Clicks",
+            "description": "Submit the form of the current element. NB using click is preferable as  javascript may be executed on click, which this method would bypass"
+        }
+    ],
+    "Forms": [
+        {
+            "expression": "AssertRadioButton name=\"<name>\", text=\"<text>\", checked=\"<checked>\"",
+            "example": "AssertRadioButton name=\"radio_btn_name\", text=\"text\",\n          checked=\"true\"",
+            "section": "Forms",
+            "description": "Asserts a value of a radio button"
+        },
+        {
+            "expression": "ChooseOption \"<value>\" in current element",
+            "example": "ChooseOption \"fred\" in current element",
+            "section": "Forms",
+            "description": "Select a value in the option list in the current element, a Find  operation is required immediatebly before"
+        },
+        {
+            "expression": "ChooseOption \"<value>\" in id <id>",
+            "example": "ChooseOption \"fred\" in id usersList",
+            "section": "Forms",
+            "description": "Select a value in the option list that has the id"
+        },
+        {
+            "expression": "ClearAndSendKeys \"<value>\"",
+            "example": "ClearAndSendKeys \"hello\"",
+            "section": "Forms",
+            "description": "Clear any text from the element, and enter text (to the current element)"
+        },
+        {
+            "expression": "ClearAndSendKeys \"<value>\" to id <id>",
+            "example": "ClearAndSendKeys \"fred\" to id username",
+            "section": "Forms",
+            "description": "Find an element by id, clear any text from the element, and enter text"
+        },
+        {
+            "expression": "SendKeys \"<value>\"",
+            "example": "SendKeys hello",
+            "section": "Forms",
+            "description": "Enters text to the current element, without clearing any current content  first"
+        },
+        {
+            "expression": "SetCheckBox name=\"<name>\", checked=<checked>",
+            "example": "SetCheckBox name=\"accept\", checked=true",
+            "section": "Forms",
+            "description": "Sets a check box value."
+        },
+        {
+            "expression": "SetCheckedBox checked=<checked>",
+            "example": "SetCheckedBox checked=true",
+            "section": "Forms",
+            "description": "Sets the value of the current element, assumed to be a checkbox to..."
+        },
+        {
+            "expression": "SetRadioButton checked=<checked>",
+            "example": "SetRadioButton checked=true",
+            "section": "Forms",
+            "description": "Sets the value of the current element, assumed to be a radio button to..."
+        },
+        {
+            "expression": "SetRadioButton name =<name>, value =<value>, checked =<checked>",
+            "example": "SetRadioButton name=opt_in, value=OFF, checked=true",
+            "section": "Forms",
+            "description": "Use: FindRadioButton inside tag=\"label\" with label=\"<radio_button_text>\"  + SetRadioButton checked=<true> in preference as this will locate the  radio button by visible text rather than the underlying value.    Locates a radio button with a specific value and checks the radio button."
+        },
+        {
+            "expression": "SetRadioButton name=\"<name>\", text=\"<text>\"",
+            "example": "SetRadioButton name=\"opt_in\", text=\"radio button text\"",
+            "section": "Forms",
+            "description": "Sets the value of a radio button"
+        }
+    ],
+    "Location": [
+        {
+            "expression": "FindById <id>",
+            "example": "FindById username",
+            "section": "Location",
+            "description": "Find an element by it's ID"
+        },
+        {
+            "expression": "FindByIdTimeout <id> timeout = <timeout> secs",
+            "example": "FindByIdTimeout username timeout = 15 secs",
+            "section": "Location",
+            "description": "Find an element by it's ID with the specified timeout"
+        },
+        {
+            "expression": "FindByName \"<name>\"",
+            "example": "FindByName \"named field\"",
+            "section": "Location",
+            "description": "Find an element using the name attribute of the element"
+        },
+        {
+            "expression": "FindByTagAndAttributes tag=\"<tag>\" attributes=[<attributeString>]",
+            "example": "FindByTagAndAttributes tag=\"input\"\n          attributes=[type=\"submit\",value=\"Search\"]",
+            "section": "Location",
+            "description": "Find an element by tag name and a set of attributes and corresponding  values"
+        },
+        {
+            "expression": "FindByXpath <xpath>",
+            "example": "FindByXpath",
+            "section": "Location",
+            "description": "Find an id by xpath"
+        },
+        {
+            "expression": "FindCheckbox inside tag=\"<tag>\" with label=\"<label>\"",
+            "example": "FindCheckbox inside tag=\"label\" with label=\"a checkbox label>\"",
+            "section": "Location",
+            "description": "Finds a checkbox that is a child of the specified tag, that contains the  specified text; eg.    <pre>  <label>   <input type=\"checkbox\" name=\"checkbox_name\" value=\"yeah\"/>a checkbox <span>label</span>  </label>  </pre>"
+        },
+        {
+            "expression": "FindChild ByName name=\"<name>\"",
+            "example": "FindChild ByName name=\"child name\"",
+            "section": "Location",
+            "description": "Finds an element that is a child of the current element using the name  attribute, another Find method should be used first"
+        },
+        {
+            "expression": "FindChild ByTagAndAttributes tag=\"<tag>\" attributes=[<attributeString>]",
+            "example": "FindChild ByTagAndAttributes tag=\"input\"\n          attributes=[type=\"submit\",value=\"Search\"]",
+            "section": "Location",
+            "description": "Finds an element that is a child of the current element using the tag  name and specified attributes, another Find method should be used first"
+        },
+        {
+            "expression": "FindRadioButton inside tag=\"<tag>\" with label=\"<label>\"",
+            "example": "FindRadioButton inside tag=\"label\" with label=\"a radio label>\"",
+            "section": "Location",
+            "description": "Finds a radiobutton that is a child of the specified tag, that contains  the specified text; eg.    <pre>  <label>   <input type=\"radio\" name=\"radio_name\" value=\"yeah\"/>a radio <span>label</span>  </label>  </pre>"
+        },
+        {
+            "expression": "NavigateTo <url>",
+            "example": "NavigateTo /myApp (will navigate to http://localhost/myApp if\n          base.url is set to http://localhost)",
+            "section": "Location",
+            "description": "Navigate to a url, if the url begins with http or file, the url will be  used as is, if a relative url is specified then it will be prepended with  the base url property"
+        },
+        {
+            "expression": "WaitFor <value>",
+            "example": "WaitFor 10",
+            "section": "Location",
+            "description": "Wait for the specified number of milliseconds"
+        },
+        {
+            "expression": "WaitForPageTitle \"<expectedTitle>\"",
+            "example": "WaitForPageTitle \"My Home Page\"",
+            "section": "Location",
+            "description": "Wait for the page title to change to the specified value"
+        }
+    ],
+    "Miscellaneous": [
+        {
+            "expression": "AssertDifferent rememberedValue \"<rememberedValueName>\" compareToElement \"<elementId>\"",
+            "example": "AssertDifferent rememberedValue \"savedProjectName\"\n          compareToElement \"projectName\"",
+            "section": "",
+            "description": "Compare the text of an element (identified by ID) to a value previously  remembered"
+        },
+        {
+            "expression": "AssertEventuallyContains <elementId> \"<text>\"",
+            "example": "AssertEventuallyContains mySpan",
+            "section": "",
+            "description": "Asserts that an element (identified by ID) eventually gets some specific  text inserted into it (by JavaScript, probably)"
+        },
+        {
+            "expression": "AssertEventuallyNotEmpty id=\"<elementId>\"",
+            "example": "AssertEventuallyNotEmpty mySpan",
+            "section": "",
+            "description": "Asserts that an element (identified by ID) eventually gets some text  inserted into it (by JavaScript, probably)"
+        },
+        {
+            "expression": "AssertNotPresent text=\"<text>\"",
+            "example": "",
+            "section": "",
+            "description": "Assert that the specified text is not found within the page"
+        },
+        {
+            "expression": "AssertPageSourceContains \"<expected>\"",
+            "example": "AssertPageSourceContains \"foobar\"",
+            "section": "",
+            "description": "Simple text search on page source"
+        },
+        {
+            "expression": "AssertSame rememberedValue \"<rememberedValueName>\" compareToElement \"<elementId>\"",
+            "example": "AssertSame rememberedValue \"savedProjectName\" compareToElement\n          \"projectName\"",
+            "section": "",
+            "description": "Compare the text of an element (identified by ID) to a value previously  remembered - assert they're the same"
+        },
+        {
+            "expression": "AssertSelect id=\"<id>\" text=\"<value>\" is currently selected",
+            "example": "",
+            "section": "",
+            "description": ""
+        },
+        {
+            "expression": "AssertSelect id=\"<id>\" text=\"<value>\" is not currently selected",
+            "example": "",
+            "section": "",
+            "description": ""
+        },
+        {
+            "expression": "ClickSubmitButton \"<buttonText>\"",
+            "example": "",
+            "section": "",
+            "description": ""
+        },
+        {
+            "expression": "RememberForScenario textFrom \"<elementId>\" as \"<nameToSaveAs>\"",
+            "example": "RememberForScenario textFrom \"projectName\" as \"savedProjectName\"",
+            "section": "",
+            "description": "Grab the text of an element (identified by id) and save it for the  duration of this scenario"
+        }
+    ],
+    "Startup / Shutodwn": [
+        {
+            "expression": "Shutdown",
+            "example": "Shutdown",
+            "section": "Startup / Shutodwn",
+            "description": "Shuts down the current web driver session"
+        },
+        {
+            "expression": "Startup",
+            "example": "Startup",
+            "section": "Startup / Shutodwn",
+            "description": "Starts a new web driver session"
+        }
+    ],
+    "Table": [
+        {
+            "expression": "AssertTableValue column <column>, row <row> contains text \"<text>\"",
+            "example": "AssertTableValue column 2, row 3 contains text \"Hello Bob\"",
+            "section": "Table",
+            "description": "Check that a table cell contains the specified text using a 1 based  index. Row 0 is the first  <tr>  beneath a <tbody>"
+        },
+        {
+            "expression": "FindTableBodyRow row <row>",
+            "example": "FindTableBodyRow row 3",
+            "section": "Table",
+            "description": "Locates the table body row, assuming that the table has already been  located Row 1 is the first  <tr>  beneath a <tbody>"
         }
     ]
 }
