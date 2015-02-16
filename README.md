@@ -9,6 +9,7 @@ Configuration
 ------------------
 This viewer is configured through the config.js file. The following options are available:
 
+```javascript
     //The name of this api: Used in title and Navbar
     var apiName = "Animal Creation Language API";
 
@@ -20,7 +21,7 @@ This viewer is configured through the config.js file. The following options are 
 
     //The location of the data file
     var dataLocation = "animals.json";
-
+```
 Data
 ------------------
 The data file that is used by this viewer is a json resource that contains a map of Sections to Command objects. A Section is just a simple label that can be asssociated with a group of Commands. 
@@ -33,7 +34,7 @@ A Command element consists of the following fields:
 * *description* : An explanation of how to use the Command and the action that it performs  (Any html is not escaped).
 
 An example of a complete data file is: 
-
+```json
     {
     	"Mammals": [
     	    {
@@ -55,3 +56,4 @@ An example of a complete data file is:
         	}
     	]
     }
+```
